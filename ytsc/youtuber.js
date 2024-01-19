@@ -37,11 +37,7 @@ import { Image } from 'image-js'
 	{
 		for(let j = 0; j < image.width - 1; await j++)
 		{
-			img[i][j] = await styles.bgColor.ansi16m(
-
-				image.getPixelXY(j, i)[0],
-				image.getPixelXY(j, i)[1],
-				image.getPixelXY(j, i)[2]);
+			img[i][j] = await styles.bgColor.ansi16m(image.getPixelXY(j, i)[0], image.getPixelXY(j, i)[1], image.getPixelXY(j, i)[2]);
 			img[i][j] += await ' ';
 		}
 		img[i][image.width] = '\n';
